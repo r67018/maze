@@ -1,17 +1,24 @@
 CC := g++
+CFLAGS := -Wall -O2
 
 PROG := main
-OBJ := main.o game.o maze.o player.o
+SRCDIR := src
+OUTDIR := build
+TARGET := $(OUTDIR)/$(PROG)
+SRCS := $(wildcard $(SRCDIR)/*.cpp)
+OBJS := $(addprefix $(OUTDIR)/,$(patsubst %.cpp,%.o,$(SRCS)))
 
-all: $(OBJ) $(PROG) clean
+.PHONY: all clean
+all: $(TARGET)
 
-$(PROG) : $(OBJ)
-	$(CC) -o $@ $^
+# executable file
+$(TARGET) : $(OBJS)
+	$(CC) $(CFLAGS) -o $@ $^
 
-.cpp.o:
-	$(CC) -c $^
+# object files
+$(OUTDIR)/%.o: %.cpp
+	@if [ ! -e `dirname $@` ]; then mkdir -p `dirname $@`; fi
+	$(CC) $(CFLAGS) -o $@ $^ -c
 
-
-.PHONY: clean
 clean:
-	rm -f $(OBJ)
+	rm -rf $(OUTDIR)
