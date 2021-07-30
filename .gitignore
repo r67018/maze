@@ -1,0 +1,13 @@
+# files without extension
+*
+!*/
+!*.*
+
+# include Makefile
+!Makefile
+
+# object file
+*.o
+
+# precompiled header file
+*.gch
