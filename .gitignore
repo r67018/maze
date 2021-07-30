@@ -11,3 +11,6 @@
 
 # precompiled header file
 *.gch
+
+# build directory
+build/
