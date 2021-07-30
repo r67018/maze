@@ -1,5 +1,5 @@
 CC := g++
-CFLAGS := -Wall -O2
+CFLAGS :=
 
 PROG := main
 SRCDIR := src
