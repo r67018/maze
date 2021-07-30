@@ -4,7 +4,6 @@
 
 #include "maze.hpp"
 #include "player.hpp"
-#include "clear.hpp"
 
 
 class Game
@@ -14,7 +13,7 @@ public:
 
     Game(int W, int H) : maze(W, H) , player(maze.start)
     {
-        CONSOLE_CLEAR();
+        std::printf("\e[2J");
         maze.print();
     }
 

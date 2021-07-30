@@ -1,5 +1,4 @@
 #include "game.hpp"
-#include "clear.hpp"
 
 
 #if defined(_WIN64) || defined(_WIN32)
@@ -61,7 +60,7 @@ void Game::update()
             if (prev_state == Maze::State::goal) {
                 running = false;
             }
-            CONSOLE_CLEAR();
+            std::printf("\e[2J");
             maze.print();
         }
     }

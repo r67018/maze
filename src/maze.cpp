@@ -1,5 +1,4 @@
 #include "maze.hpp"
-#include "clear.hpp"
 
 
 #ifdef PRINT_CREATE_PROCESS
@@ -79,7 +78,7 @@ void Maze::dig(const Coord p)
             dist[nnp.x][nnp.y] = dist[np.x][np.y] + 1;
 
             #ifdef PRINT_CREATE_PROCESS
-            CONSOLE_CLEAR();
+            std::printf("\e[2J");
             print();
             std::cout << "Creating the maze ..." << std::endl;
             std::this_thread::sleep_for(std::chrono::milliseconds(SLEEP_TIME));
