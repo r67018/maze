@@ -5,18 +5,22 @@
 ![Animation](https://user-images.githubusercontent.com/66293670/127705440-94935d94-5bed-49de-a2e0-29949519e74f.gif)
 
 # 実行方法
+docker を使うとき
+```
+docker pull swk67018/maze
+docker run --name maze -it swk67018/maze
+
+コンテナ内で
+./main
+```
+
+使わないとき
 ```
 git clone https://github.com/swk67018/maze.git
 cd maze
 make
 build/main
 ```
-
-`make` のところを `make CFLAGS="-DPRINT_CREATE_PROCESS"` としたら迷路が生成される過程を見れます(おすすめ)  
-
-# 実行環境
-Linux でも Windows でも多分動きます  
-`gcc` と `make` が入ってる環境じゃないと動きません  
 
 # 実装
 言語: C++  
