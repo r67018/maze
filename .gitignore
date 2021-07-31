@@ -6,6 +6,9 @@
 # include Makefile
 !Makefile
 
+# include Dockerfile
+!Dockerfile
+
 # object file
 *.o
 
