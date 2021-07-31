@@ -18,7 +18,7 @@ docker run --name maze -it swk67018/maze
 ```
 git clone https://github.com/swk67018/maze.git
 cd maze
-make
+make CFLAGS="-DPRINT_CREATE_PROCESS"
 build/main
 ```
 
