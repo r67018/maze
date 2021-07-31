@@ -2,6 +2,8 @@
 コンソールで動く迷路  
 迷路を自動生成するアルゴリズムを試したかった  
 
+![Animation](https://user-images.githubusercontent.com/66293670/127705440-94935d94-5bed-49de-a2e0-29949519e74f.gif)
+
 # 実行方法
 ```
 git clone https://github.com/swk67018/maze.git
