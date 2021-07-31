@@ -22,12 +22,6 @@ make
 build/main
 ```
 
-`make` のところを `make CFLAGS="-DPRINT_CREATE_PROCESS"` としたら迷路が生成される過程を見れます(おすすめ)  
-
-# 実行環境
-Linux でも Windows でも多分動きます  
-`gcc` と `make` が入ってる環境じゃないと動きません  
-
 # 実装
 言語: C++  
 アルゴリズム: 穴掘り法  
